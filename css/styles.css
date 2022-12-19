@@ -67,6 +67,7 @@ address {
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
+    text-decoration: none;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .links .nav-link:hover,
@@ -91,12 +92,14 @@ address {
         transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
             opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.nav-link:hover::after {
+.nav-link:hover::after,
+.nav-link:focus::after {
     opacity: 1;
     transform: scaleX(1);
 }
 .contact-link {
     display: flex;
+    align-items: center;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
@@ -277,8 +280,6 @@ address {
 .work-img-pos {
     position: relative;
     display: flex;
-    margin-right: 30px;
-    margin-bottom: 94px;
 }
 .work-img-hov {
     position: relative;
@@ -454,7 +455,7 @@ address {
 .project-cards {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 34px;
+    margin-top: 50px;
     gap: 30px;
 }
 .project-card {
@@ -583,7 +584,7 @@ address {
     display: flex;
     height: 20px;
     width: 20px;
-    fill: #AFB1B8;
+    fill: var(--second-color);
 }
 .footer-icon-cover:hover,
 .footer-icon-cover:focus {
